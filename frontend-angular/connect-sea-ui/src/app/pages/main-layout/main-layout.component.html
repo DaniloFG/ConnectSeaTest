@@ -1,0 +1,83 @@
+<div class="flex h-screen bg-gray-100">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white shadow-xl flex flex-col">
+    <!-- Logo -->
+    <div class="h-16 flex items-center justify-center border-b">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 0 24 24" fill="blue" class="size-6">
+        <path
+          d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+        <path
+          d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+      </svg>
+      <span class="text-xl font-bold text-blue-600">Menu</span>
+    </div>
+
+    <nav class="flex-1 px-4 py-6 space-y-2">
+      <a routerLink="/app/manifestos"
+        class="flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-blue-100 hover:text-blue-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+          <path fill-rule="evenodd"
+            d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
+            clip-rule="evenodd" />
+        </svg>
+        Manifestos
+      </a>
+
+      <a routerLink="/app/escalas"
+        class="flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-blue-100 hover:text-blue-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+          <path fill-rule="evenodd"
+            d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
+            clip-rule="evenodd" />
+        </svg>
+        Escalas
+      </a>
+
+      <a routerLink="/app/vinculos"
+        class="flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-blue-100 hover:text-blue-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+          <path fill-rule="evenodd"
+            d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H3.989a.75.75 0 0 0-.75.75v4.242a.75.75 0 0 0 1.5 0v-2.43l.31.31a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.449-.39Zm1.23-3.723a.75.75 0 0 0 .219-.53V2.929a.75.75 0 0 0-1.5 0V5.36l-.31-.31A7 7 0 0 0 3.239 8.188a.75.75 0 1 0 1.448.389A5.5 5.5 0 0 1 13.89 6.11l.311.31h-2.432a.75.75 0 0 0 0 1.5h4.243a.75.75 0 0 0 .53-.219Z"
+            clip-rule="evenodd" />
+        </svg>
+        Vinculados
+      </a>
+
+      <a routerLink="/app/criarvinculo"
+        class="flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-blue-100 hover:text-blue-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+          <path fill-rule="evenodd"
+            d="M11.013 2.513a1.75 1.75 0 0 1 2.475 2.474L6.226 12.25a2.751 2.751 0 0 1-.892.596l-2.047.848a.75.75 0 0 1-.98-.98l.848-2.047a2.75 2.75 0 0 1 .596-.892l7.262-7.261Z"
+            clip-rule="evenodd" />
+        </svg>
+        Criar Vinculo
+      </a>
+
+      <a routerLink="/app/dashboard"
+        class="flex items-center px-3 py-2 text-gray-700 rounded-lg hover:bg-blue-100 hover:text-blue-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+          <path
+            d="M12 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-1ZM6.5 6a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V6ZM2 9a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9Z" />
+        </svg>
+        Dashboard
+      </a>
+    </nav>
+
+    <!-- Footer -->
+    <div class="p-4 border-t">
+      <a routerLink="/login"
+        class="w-full flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+        Sair
+      </a>
+    </div>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <main class="flex-1 p-8">
+    <header>
+    </header>
+    <section class="p-6">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>

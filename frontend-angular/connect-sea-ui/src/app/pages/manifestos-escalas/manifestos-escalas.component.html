@@ -1,0 +1,7 @@
+<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+  <div *ngFor="let item of manifestoEscalaList" class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition-shadow cursor-pointer">
+    <p><span class="font-medium">Manifesto ID:</span> {{ item.manifestoId }}</p>
+    <p><span class="font-medium">Escala ID:</span> {{ item.escalaId }}</p>
+    <p><span class="font-medium">Data Vinculação:</span> {{ item.dataVinculacao | date: 'dd/MM/yyyy' }}</p>
+  </div>
+</div>

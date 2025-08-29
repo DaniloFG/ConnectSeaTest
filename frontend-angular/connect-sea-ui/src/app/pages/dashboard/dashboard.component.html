@@ -1,0 +1,44 @@
+<div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+  <!-- Card Manifestos -->
+  <div class="bg-white rounded-2xl shadow-lg p-4">
+    <h3 class="text-lg font-semibold mb-3 text-gray-700">Total de Manifestos</h3>
+    <ngx-charts-pie-chart
+      [results]="graficoManifestos"
+      [view]="view"
+      [doughnut]="true"
+      [labels]="true"
+      [legend]="false"
+      [animations]="true">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <!-- Card Escalas -->
+  <div class="bg-white rounded-2xl shadow-lg p-4">
+    <h3 class="text-lg font-semibold mb-3 text-gray-700">Total de Escalas</h3>
+    <ngx-charts-pie-chart
+      [results]="graficoEscalas"
+      [view]="view"
+      [doughnut]="true"
+      [labels]="true"
+      [legend]="false"
+      [animations]="true">
+    </ngx-charts-pie-chart>
+  </div>
+
+  <!-- Card Relacionamento -->
+  <div class="bg-white rounded-2xl shadow-lg p-4 col-span-1 md:col-span-3">
+    <h3 class="text-lg font-semibold mb-3 text-gray-700">Relação Manifesto x Escalas</h3>
+    <ngx-charts-bar-vertical
+      [results]="graficoRelacionamento"
+      [view]="[700,500]"
+      [legend]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      xAxisLabel="Manifestos"
+      yAxisLabel="Qtd Escalas"
+      [animations]="true">
+    </ngx-charts-bar-vertical>
+  </div>
+</div>
