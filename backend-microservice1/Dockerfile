@@ -1,17 +1,17 @@
-# Exemplo .NET 8 - ajustar conforme necessidade
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-
-COPY *.csproj ./
-RUN dotnet restore
-
+COPY ["ConnectSeaMs1Api/ConnectSeaMs1Api.csproj", "ConnectSeaMs1Api/"]
+RUN dotnet restore "./ConnectSeaMs1Api/ConnectSeaMs1Api.csproj"
 COPY . .
-RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet build "./ConnectSeaMs1Api/ConnectSeaMs1Api.csproj" -o /src/build
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
+FROM build AS publish
+RUN dotnet publish "./ConnectSeaMs1Api/ConnectSeaMs1Api.csproj" -o /src/publish /p:UseAppHost=false
 
-COPY --from=build /app/publish .
-
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /src
+COPY --from=publish /src/publish .
+ENV ASPNETCORE_URLS=http://+:80
 EXPOSE 80
-ENTRYPOINT ["dotnet", "Microservice1.dll"]
+ENTRYPOINT ["dotnet", "ConnectSeaMs1Api.dll"]
+

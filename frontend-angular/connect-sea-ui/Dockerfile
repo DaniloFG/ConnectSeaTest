@@ -3,15 +3,17 @@ FROM node:20-alpine AS build
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 COPY . .
-RUN npm run build -- --configuration=production --output-hashing=all
+RUN npx ng build --configuration production
 
 # Stage 2: Serve with nginx
 FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY --from=build /app/dist/connect-sea-ui/browser /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

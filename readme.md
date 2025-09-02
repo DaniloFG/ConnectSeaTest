@@ -97,3 +97,20 @@ dotnet test
 📌 Estrutura de Imagens dos Testes
 
 ![Swagger Backend](./testes.png)
+
+## Build e Deploy no Kubernetes
+
+Para criar as imagens Docker do backend e frontend e aplicar os manifestos no Kubernetes, siga os comandos abaixo:
+
+```bash
+# Build da imagem do backend
+docker build -t connectseams1api:1.0 ./backend-microservice1
+
+# Build da imagem do frontend
+docker build -t frontend-angular:1.0 ./frontend-angular/connect-sea-ui
+
+# Aplicando os manifestos do backend
+kubectl apply -f backend-microservice1/k8s/
+
+# Aplicando os manifestos do frontend
+kubectl apply -f frontend-angular/connect-sea-ui/k8s/
