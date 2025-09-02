@@ -114,3 +114,8 @@ kubectl apply -f backend-microservice1/k8s/
 
 # Aplicando os manifestos do frontend
 kubectl apply -f frontend-angular/connect-sea-ui/k8s/
+```
+
+Acessando a aplicação
+
+Frontend: disponível em http://localhost:30082
