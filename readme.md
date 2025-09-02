@@ -24,6 +24,9 @@ npm start
 ```
 
 📊 Telas do Frontend
+
+exemplo: teste@email.com, qualquerSenha
+
 ![Login](./login.png)
 ![Sidebar](./sidebar.png)
 
@@ -117,5 +120,6 @@ kubectl apply -f frontend-angular/connect-sea-ui/k8s/
 ```
 
 Acessando a aplicação
+
 
 Frontend: disponível em http://localhost:30082
