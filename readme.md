@@ -103,7 +103,7 @@ dotnet test
 
 ## Build e Deploy no Kubernetes
 
-Para criar as imagens Docker do backend e frontend e aplicar os manifestos no Kubernetes, siga os comandos abaixo:
+Para criar as imagens Docker do backend e frontend e aplicar os manifestos no Kubernetes, siga os comandos abaixo na pasta raiz:
 
 ```bash
 # Build da imagem do backend
@@ -123,3 +123,4 @@ Acessando a aplicação
 
 
 Frontend: disponível em http://localhost:30082
+
